@@ -2,7 +2,9 @@ FROM ubuntu:16.04
 
 RUN apt-get update
 
-RUN apt-get install -y openssh-server
+#RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server git make gcc binutils gzip bzip2 unzip vim
+
 RUN mkdir /var/run/sshd
 
 RUN echo 'root:password' |chpasswd
